@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gemini Nano Recipe Crawler</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 400px; /* Wider width */
+      padding: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    #message {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+      white-space: pre-wrap;
+    }
+    #error {
+      margin-top: 10px;
+      color: red;
+    }
+    #recipesList {
+      margin-top: 20px;
+    }
+    .recipe {
+      margin-bottom: 10px;
+    }
+    /* Accordion Styles */
+    .accordion {
+      background-color: #f9f9f9;
+      color: #444;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      transition: 0.4s;
+    }
+    .accordion.active, .accordion:hover {
+      background-color: #ccc;
+    }
+    .panel {
+      padding: 0 10px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+    .delete-btn {
+      background-color: red;
+      color: white;
+      padding: 5px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Crawl for Recipes</h3>
+  <button id="crawlBtn">Crawl Recipes</button>
+  <button id="viewRecipesBtn">View Saved Recipes</button>
+
+  <div id="message"></div>
+  <div id="error"></div>
+
+  <div id="recipesList">
+    <div id="savedRecipesContainer"></div>
+  </div>
+
+  <script src="dist/bundle.js"></script> <!-- Link to the bundled JS -->
+</body>
+</html>
